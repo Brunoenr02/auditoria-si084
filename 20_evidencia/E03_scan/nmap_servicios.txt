@@ -1,0 +1,69 @@
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-09-03 06:11 +0000
+Nmap scan report for si084_dvwa.si084-lab_audit_net (172.20.0.4)
+Host is up (0.0000080s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.25 ((Debian))
+MAC Address: 1E:79:5A:15:2A:4A (Unknown)
+
+Nmap scan report for si084_wpdb.si084-lab_audit_net (172.20.0.5)
+Host is up (0.0000070s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+3306/tcp open  mysql   MariaDB 11.8.9
+MAC Address: D2:94:87:48:B7:43 (Unknown)
+
+Nmap scan report for si084_juiceshop.si084-lab_audit_net (172.20.0.6)
+Host is up (0.0000070s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+3000/tcp open  ppp?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.98%I=7%D=9/3%Time=6A990F8B%P=x86_64-unknown-linux-gnu%
+SF:r(GetRequest,2668,"HTTP/1\.1\x20200\x20OK\r\nAccess-Control-Allow-Origi
+SF:n:\x20\*\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20S
+SF:AMEORIGIN\r\nFeature-Policy:\x20payment\x20'self'\r\nX-Recruiting:\x20/
+SF:#/jobs\r\nAccept-Ranges:\x20bytes\r\nCache-Control:\x20public,\x20max-a
+SF:ge=0\r\nLast-Modified:\x20Thu,\x2003\x20Sep\x202026\x2006:04:43\x20GMT\
+SF:r\nETag:\x20W/\"24b1-1a065de9dc8\"\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=UTF-8\r\nContent-Length:\x209393\r\nVary:\x20Accept-Encoding\r\nD
+SF:ate:\x20Thu,\x2003\x20Sep\x202026\x2006:11:23\x20GMT\r\nConnection:\x20
+SF:close\r\n\r\n<!--\n\x20\x20~\x20Copyright\x20\(c\)\x202014-2026\x20Bjoe
+SF:rn\x20Kimminich\x20&\x20the\x20OWASP\x20Juice\x20Shop\x20contributors\.
+SF:\n\x20\x20~\x20SPDX-License-Identifier:\x20MIT\n\x20\x20-->\n\n<!doctyp
+SF:e\x20html>\n<html\x20lang=\"en\"\x20data-beasties-container>\n<head>\n\
+SF:x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20<title>OWASP\x20Juice\x20Sh
+SF:op</title>\n\x20\x20<meta\x20name=\"description\"\x20content=\"Probably
+SF:\x20the\x20most\x20modern\x20and\x20sophisticated\x20insecure\x20web\x2
+SF:0application\">\n\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=
+SF:device-width,\x20initial-scale=1\">\n\x20\x20<link\x20rel=\"preconnect\
+SF:"\x20href=\"htt")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConn
+SF:ection:\x20close\r\n\r\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,EA,"HTTP/1\.1\x20204\x
+SF:20No\x20Content\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Control
+SF:-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nVary:\x20Access-Co
+SF:ntrol-Request-Headers\r\nContent-Length:\x200\r\nDate:\x20Thu,\x2003\x2
+SF:0Sep\x202026\x2006:11:23\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(RTS
+SF:PRequest,EA,"HTTP/1\.1\x20204\x20No\x20Content\r\nAccess-Control-Allow-
+SF:Origin:\x20\*\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,PO
+SF:ST,DELETE\r\nVary:\x20Access-Control-Request-Headers\r\nContent-Length:
+SF:\x200\r\nDate:\x20Thu,\x2003\x20Sep\x202026\x2006:11:23\x20GMT\r\nConne
+SF:ction:\x20close\r\n\r\n");
+MAC Address: 1A:AC:6A:65:BF:8E (Unknown)
+
+Nmap scan report for si084_db.si084-lab_audit_net (172.20.0.7)
+Host is up (0.0000070s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE    VERSION
+5432/tcp open  postgresql PostgreSQL DB 9.6.0 or later
+MAC Address: 2E:4E:EA:F5:D1:5C (Unknown)
+
+Nmap scan report for si084_portal.si084-lab_audit_net (172.20.0.8)
+Host is up (0.0000080s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.68 ((Debian))
+MAC Address: E6:A1:E6:85:70:22 (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 5 IP addresses (5 hosts up) scanned in 12.01 seconds

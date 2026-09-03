@@ -1,0 +1,12 @@
+activo_afectado,vulnerabilidad,cve,probabilidad,impacto,equipo_responsable,control_iso27001,id_riesgo,riesgo_inherente,nivel_riesgo
+172.20.0.4,Operating System (OS) End of Life (EOL) Detection,N/A,5,5,Desarrollo de Software,A.8.8 Gestión de vulnerabilidades técnicas,RSK-001,25,Crítico
+172.20.0.4,Servidor Web Apache 2.4.25 obsoleto sin hardening,CVE-2021-41773,5,4,Infraestructura y Redes,A.8.8 Gestión de vulnerabilidades técnicas,RSK-010,20,Crítico
+172.20.0.5,Puerto de Base de Datos MariaDB (3306) expuesto,N/A,4,4,Administración de Base de Datos,A.8.20 Seguridad de redes,RSK-008,16,Alto
+172.20.0.7,Servicio PostgreSQL (5432) sin restricción perimetral,N/A,4,4,Administración de Base de Datos,A.8.20 Seguridad de redes,RSK-009,16,Alto
+172.20.0.6,Juice Shop expuesto sin cabeceras de seguridad HTTP,N/A,3,3,Desarrollo de Software,A.8.28 Codificación segura,RSK-011,9,Medio
+172.20.0.8,TCP Timestamps Information Disclosure,N/A,2,2,Infraestructura y Redes,A.8.9 Gestión de la configuración,RSK-003,4,Bajo
+172.20.0.4,TCP Timestamps Information Disclosure,N/A,2,2,Desarrollo de Software,A.8.9 Gestión de la configuración,RSK-002,4,Bajo
+172.20.0.6,ICMP Timestamp Reply Information Disclosure,N/A,2,2,Desarrollo de Software,A.8.9 Gestión de la configuración,RSK-007,4,Bajo
+172.20.0.4,ICMP Timestamp Reply Information Disclosure,N/A,2,2,Desarrollo de Software,A.8.9 Gestión de la configuración,RSK-006,4,Bajo
+172.20.0.8,ICMP Timestamp Reply Information Disclosure,N/A,2,2,Infraestructura y Redes,A.8.9 Gestión de la configuración,RSK-005,4,Bajo
+172.20.0.6,TCP Timestamps Information Disclosure,N/A,2,2,Desarrollo de Software,A.8.9 Gestión de la configuración,RSK-004,4,Bajo
