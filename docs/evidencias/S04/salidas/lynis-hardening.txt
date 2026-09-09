@@ -1,0 +1,5 @@
+Lynis - Hardening index
+======================
+hardening_index=53
+
+Resultado obtenido durante la ejecución del Taller 04.
