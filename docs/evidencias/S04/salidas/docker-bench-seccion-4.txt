@@ -1,0 +1,7 @@
+Docker Bench - Sección 4
+========================
+4.1 WARN - Se detectaron múltiples contenedores ejecutándose como root.
+4.5 WARN - Docker Content Trust no está habilitado.
+4.6 WARN - Varias imágenes no incorporan HEALTHCHECK.
+
+Estas reglas fueron analizadas en el papel de trabajo PT04.
