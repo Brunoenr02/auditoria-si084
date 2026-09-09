@@ -221,14 +221,31 @@ Aunque el umbral ya se cumple, en el Paso F se revisarán los 24 elementos sin c
 
 ## F. Diseño frente a eficacia operativa
 
-**Estado:** Pendiente de validación final.
+### F.1 Validaciones efectuadas
 
-Criterio de análisis:
+1. **Porcentaje sin clasificar:** 24 de 476 hallazgos, equivalente a **5.04 %**. Cumple el criterio de menos del 20 %.
+2. **OpenSCAP:** se obtuvieron 3 reglas fallidas de severidad Medium y 0 High. Las tres reglas fallidas conservan su identificador XCCDF completo.
+3. **Diseño vs. eficacia operativa:** se analizó el control con mayor concentración de hallazgos.
 
-- **Deficiencia de diseño:** el control no existe.
-- **Deficiencia de eficacia operativa:** el control existe, pero no se ejecutó o no funcionó como estaba previsto.
+### F.2 Control seleccionado
 
-Candidato preliminar para análisis: controles de restricción de privilegios en contenedores, sujeto a validación después de consolidar los cuatro escáneres.
+**ISO/IEC 27001:2022 A.8.8 — Gestión de vulnerabilidades técnicas**
+
+La matriz consolidada concentra **415 hallazgos** en este control. Trivy identificó **418 vulnerabilidades HIGH/CRITICAL** en las cuatro imágenes analizadas.
+
+### F.3 Clasificación
+
+**Deficiencia de eficacia operativa.**
+
+El control no está ausente: existen actividades de identificación de vulnerabilidades y A.8.8 ya forma parte del alcance de auditoría. Sin embargo, el volumen de vulnerabilidades HIGH y CRITICAL demuestra que la identificación no está acompañada por una ejecución suficientemente eficaz del seguimiento y remediación.
+
+Se recomienda fortalecer la ejecución mediante responsables, plazos de remediación, priorización por criticidad, actualización de imágenes y reescaneo posterior.
+
+### F.4 Evidencia
+
+- `docs/evidencias/S04/salidas/PT04_validacion.txt`
+- `40_hallazgos/PT04_matriz_control.csv`
+
 
 ---
 

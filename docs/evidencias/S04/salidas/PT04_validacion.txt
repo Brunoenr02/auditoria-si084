@@ -1,0 +1,30 @@
+PASO F - VALIDACION Y CORRECCION
+================================
+
+1. Porcentaje Sin clasificar
+Total de hallazgos: 476
+Sin clasificar: 24
+Porcentaje: 5.04 %
+Criterio requerido: < 20 %
+Resultado: CUMPLE
+
+2. Validacion OpenSCAP
+Fallos de severidad High: 0
+Fallos de severidad Medium: 3
+Las tres reglas fallidas conservan su identificador XCCDF completo.
+La comprobacion de reglas High no aplica porque la ejecucion real no produjo fallos High.
+
+3. Diseno frente a eficacia operativa
+Control con mayor concentracion:
+A.8.8 Management of technical vulnerabilities
+Hallazgos asociados: 415
+
+Clasificacion:
+DEFICIENCIA DE EFICACIA OPERATIVA
+
+Justificacion:
+El control A.8.8 ya habia sido identificado como aplicable y existian
+actividades previas de identificacion de vulnerabilidades. Sin embargo,
+la ejecucion actual de Trivy identifico 418 vulnerabilidades HIGH/CRITICAL.
+Por ello, la debilidad se interpreta como una insuficiencia en la ejecucion,
+seguimiento y remediacion del control, y no como ausencia total de su diseno.
