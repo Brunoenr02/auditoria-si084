@@ -1,0 +1,7 @@
+Lynis - Top 3 sugerencias analizadas
+===================================
+1. FIRE-4590 -> ISO/IEC 27001:2022 A.8.20 Seguridad de redes
+2. ACCT-9628 -> ISO/IEC 27001:2022 A.8.15 Registro de eventos
+3. FINT-4350 -> ISO/IEC 27001:2022 A.8.16 Actividades de monitorización
+
+La ejecución produjo 0 warnings; estas entradas corresponden a sugerencias priorizadas.

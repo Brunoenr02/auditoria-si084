@@ -1,0 +1,10 @@
+OpenSCAP - Resumen
+==================
+Perfil: xccdf_org.ssgproject.content_profile_cis_level1_server
+PASS: 128
+FAIL: 3
+Fallos High: 0
+Fallos Medium: 3
+Score: 96.6 %
+
+La ejecución real produjo tres fallos Medium y cero High.
