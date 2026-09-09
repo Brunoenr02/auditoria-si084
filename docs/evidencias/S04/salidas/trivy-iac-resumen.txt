@@ -1,0 +1,19 @@
+Trivy IaC - resultado
+=====================
+
+
+Report Summary
+
+┌────────┬──────┬───────────────────┐
+│ Target │ Type │ Misconfigurations │
+├────────┼──────┼───────────────────┤
+│   -    │  -   │         -         │
+└────────┴──────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+Archivos presentes en entorno/:
+entorno/docker-compose.yml
+entorno/greenbone/docker-compose.yml

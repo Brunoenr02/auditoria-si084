@@ -1,0 +1,12 @@
+trivy_bkimminich_juice-shop_latest.json
+  HIGH:     45
+  CRITICAL: 8
+trivy_mariadb_11.json
+  HIGH:     21
+  CRITICAL: 1
+trivy_postgres_16.json
+  HIGH:     98
+  CRITICAL: 14
+trivy_wordpress_latest.json
+  HIGH:     210
+  CRITICAL: 21

@@ -1,0 +1,37 @@
+===== MATRIZ DE CONTROL PT04 =====
+
+Hallazgos por herramienta y severidad:
+herramienta   severidad
+Docker Bench  Alta          27
+Lynis         Media         28
+OpenSCAP      Media          3
+Trivy         Critical      44
+              High         374
+
+Hallazgos por herramienta:
+herramienta
+Trivy           418
+Lynis            28
+Docker Bench     27
+OpenSCAP          3
+
+Hallazgos por control ISO:
+control_iso27001
+A.8.8 Management of technical vulnerabilities    415
+Sin clasificar                                    24
+A.8.15 Logging                                     9
+A.8.2 Privileged access rights                     8
+A.5.17 Authentication information                  6
+A.8.9 Configuration management                     4
+A.8.20 Networks security                           4
+A.8.6 Capacity management                          3
+A.8.16 Monitoring activities                       2
+A.8.13 Information backup                          1
+
+Total de hallazgos: 476
+Sin clasificar: 24
+Porcentaje sin clasificar: 5.04%
+RESULTADO: CUMPLE < 20 %
+
+Archivo generado:
+C:\QWERTY\auditoria-si084\40_hallazgos\PT04_matriz_control.csv
