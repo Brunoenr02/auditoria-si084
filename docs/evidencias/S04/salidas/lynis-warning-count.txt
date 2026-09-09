@@ -1,0 +1,5 @@
+Lynis - Conteo de warnings
+==========================
+warning[] detectados: 0
+
+La ejecución no produjo warnings. El análisis se apoyó en sugerencias relevantes sin inventar advertencias inexistentes.
