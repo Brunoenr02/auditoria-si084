@@ -104,11 +104,7 @@ La guía esperaba cinco reglas fallidas de severidad alta. La ejecución real pr
 | `4.5` | WARN | Docker Content Trust no está habilitado. Disminuye la garantía sobre procedencia e integridad de imágenes. | **A.8.31 Separación de entornos / gestión segura de componentes**, según criterio de implementación |
 | `4.6` | WARN | Varias imágenes no incorporan `HEALTHCHECK`. Reduce la capacidad de detectar automáticamente estados degradados. | **A.8.16 Actividades de monitorización** |
 
-Ejemplos observados en `4.1`: `si084_simplerisk`, `si084_srdb`, componentes de Greenbone, `si084_portal`, `si084_db`, `si084_wpdb` y `si084_dvwa` ejecutándose como `root`.
-
 ### C.4 Sección 5 — Runtime
-
-Se observaron, entre otros, los siguientes resultados:
 
 | Regla | Resultado | Riesgo / lectura de auditoría | Control ISO/IEC 27001:2022 |
 |---|---|---|---|
@@ -130,22 +126,64 @@ Se observaron, entre otros, los siguientes resultados:
 
 La versión ejecutada de Docker Bench utiliza la regla **5.32** para comprobar que el socket Docker no se monte dentro de contenedores, y dicha regla resultó `PASS`. En esta versión, la regla `5.31` corresponde a namespaces de usuario y también resultó `PASS`. Se conservan los identificadores reales del log en lugar de sustituirlos por la numeración de ejemplo de la guía.
 
-### C.6 Conclusión del Paso C
-
-Los hallazgos más relevantes se concentran en configuraciones de mínimo privilegio, aislamiento y límites de recursos. El hallazgo `4.1` demuestra uso extendido de `root` en contenedores; en runtime se observan además ausencia de perfiles de seguridad y controles de recursos. Estos resultados incrementan el impacto potencial de una explotación dentro de un contenedor y justifican su consolidación posterior en la matriz única de controles.
-
 ---
 
 ## D. Trivy — Vulnerabilidades, IaC, secretos y SBOM
 
-**Estado:** Pendiente de ejecución.
+### D.1 Evidencia generada
 
-Se completará con:
+- `20_evidencia/E04_config/trivy_bkimminich_juice-shop_latest.json`
+- `20_evidencia/E04_config/trivy_mariadb_11.json`
+- `20_evidencia/E04_config/trivy_postgres_16.json`
+- `20_evidencia/E04_config/trivy_wordpress_latest.json`
+- `20_evidencia/E04_config/trivy_resumen.txt`
+- `20_evidencia/E04_config/trivy_iac.txt`
+- `20_evidencia/E04_config/trivy_secretos.txt`
+- `20_evidencia/E04_config/sbom_juiceshop.json`
+- `docs/evidencias/S04/salidas/trivy-conteo-vulnerabilidades.txt`
+- `docs/evidencias/S04/salidas/trivy-secretos-resumen.txt`
+- `docs/evidencias/S04/salidas/trivy-iac-resumen.txt`
 
-- vulnerabilidades HIGH/CRITICAL de las imágenes;
-- análisis IaC;
-- escaneo de secretos;
-- SBOM CycloneDX de Juice Shop.
+### D.2 Vulnerabilidades de imágenes
+
+| Imagen | HIGH | CRITICAL | Total |
+|---|---:|---:|---:|
+| `bkimminich/juice-shop:latest` | 45 | 8 | 53 |
+| `mariadb:11` | 21 | 1 | 22 |
+| `postgres:16` | 98 | 14 | 112 |
+| `wordpress:latest` | 210 | 21 | 231 |
+| **Total** | **374** | **44** | **418** |
+
+Se identificaron **418 vulnerabilidades HIGH/CRITICAL** en las cuatro imágenes evaluadas. WordPress concentró el mayor volumen de hallazgos, seguido de PostgreSQL.
+
+### D.3 Infraestructura como código (IaC)
+
+Se ejecutó `trivy config --severity HIGH,CRITICAL` sobre `entorno/`. El reporte devolvió:
+
+- Target: `-`
+- Type: `-`
+- Misconfigurations: `-`
+
+La propia salida indica que `-` significa **Not scanned**. Por tanto, no se declara falsamente que existan cero malas configuraciones; se registra como una limitación de la ejecución. El directorio contiene archivos `docker-compose.yml`, pero la ejecución realizada no los clasificó como objetivo escaneado.
+
+### D.4 Secretos
+
+Resultado del resumen seguro:
+
+- **Secretos detectados: 0**
+- **Archivos afectados: 0**
+
+No se identificaron secretos embebidos en el repositorio durante esta ejecución. Se conserva únicamente el resumen cuantitativo para evitar exponer valores sensibles en caso de futuras ejecuciones.
+
+### D.5 SBOM CycloneDX
+
+Se generó `20_evidencia/E04_config/sbom_juiceshop.json` en formato **CycloneDX** para `bkimminich/juice-shop:latest`.
+
+El SBOM proporciona un inventario de componentes del producto y facilita determinar si una nueva vulnerabilidad afecta a componentes desplegados. Se relaciona con **ISO/IEC 27001:2022 A.8.8 — Gestión de vulnerabilidades técnicas**.
+
+### D.6 Conclusión del Paso D
+
+El análisis de vulnerabilidades produjo hallazgos de severidad elevada en las cuatro imágenes, mientras que el escaneo de secretos no identificó credenciales embebidas. El análisis IaC quedó registrado como `Not scanned`, por lo que se tratará como una limitación y no como un resultado limpio. El SBOM CycloneDX quedó generado como evidencia de inventario de componentes.
 
 ---
 
@@ -161,7 +199,7 @@ Criterio de éxito: menos del **20 %** de hallazgos en `Sin clasificar`.
 
 ## F. Diseño frente a eficacia operativa
 
-**Estado:** Pendiente de selección final después de consolidar la matriz.**
+**Estado:** Pendiente de selección final después de consolidar la matriz.
 
 Criterio de análisis:
 
@@ -178,6 +216,7 @@ Candidato preliminar para análisis: controles de restricción de privilegios en
 2. Lynis produjo cero `warning[]`; se analizaron tres sugerencias relevantes sin alterar la evidencia real.
 3. OpenSCAP produjo tres fallos `medium` y cero `high`, aunque la guía esperaba cinco fallos de severidad alta.
 4. La versión actual de Docker Bench presenta una numeración diferente a la mencionada en la guía para la verificación del socket Docker.
+5. Trivy IaC devolvió `Not scanned` para `entorno/`; se conserva esta salida como limitación en lugar de declararla como ausencia de malas configuraciones.
 
 ---
 
@@ -194,7 +233,7 @@ Candidato preliminar para análisis: controles de restricción de privilegios en
 | Lynis | Pendiente después de versionar la evidencia |
 | OpenSCAP | Pendiente después de versionar la evidencia |
 | Docker Bench | Pendiente después de versionar la evidencia |
-| Trivy | Pendiente |
+| Trivy | Pendiente después de versionar la evidencia |
 | Matriz consolidada | Pendiente |
 | Pull Request `s04-taller` → `develop` | Pendiente |
 | Etiqueta `taller-04` | Pendiente |
