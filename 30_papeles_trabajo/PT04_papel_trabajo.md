@@ -158,48 +158,70 @@ Se identificaron **418 vulnerabilidades HIGH/CRITICAL** en las cuatro imágenes 
 
 ### D.3 Infraestructura como código (IaC)
 
-Se ejecutó `trivy config --severity HIGH,CRITICAL` sobre `entorno/`. El reporte devolvió:
-
-- Target: `-`
-- Type: `-`
-- Misconfigurations: `-`
-
-La propia salida indica que `-` significa **Not scanned**. Por tanto, no se declara falsamente que existan cero malas configuraciones; se registra como una limitación de la ejecución. El directorio contiene archivos `docker-compose.yml`, pero la ejecución realizada no los clasificó como objetivo escaneado.
+Se ejecutó `trivy config --severity HIGH,CRITICAL` sobre `entorno/`. El reporte devolvió `Not scanned`, por lo que no se interpreta como cero malas configuraciones y se registra como limitación de la ejecución.
 
 ### D.4 Secretos
-
-Resultado del resumen seguro:
 
 - **Secretos detectados: 0**
 - **Archivos afectados: 0**
 
-No se identificaron secretos embebidos en el repositorio durante esta ejecución. Se conserva únicamente el resumen cuantitativo para evitar exponer valores sensibles en caso de futuras ejecuciones.
-
 ### D.5 SBOM CycloneDX
 
-Se generó `20_evidencia/E04_config/sbom_juiceshop.json` en formato **CycloneDX** para `bkimminich/juice-shop:latest`.
-
-El SBOM proporciona un inventario de componentes del producto y facilita determinar si una nueva vulnerabilidad afecta a componentes desplegados. Se relaciona con **ISO/IEC 27001:2022 A.8.8 — Gestión de vulnerabilidades técnicas**.
-
-### D.6 Conclusión del Paso D
-
-El análisis de vulnerabilidades produjo hallazgos de severidad elevada en las cuatro imágenes, mientras que el escaneo de secretos no identificó credenciales embebidas. El análisis IaC quedó registrado como `Not scanned`, por lo que se tratará como una limitación y no como un resultado limpio. El SBOM CycloneDX quedó generado como evidencia de inventario de componentes.
+Se generó `20_evidencia/E04_config/sbom_juiceshop.json` en formato **CycloneDX** para `bkimminich/juice-shop:latest`. Se relaciona con **ISO/IEC 27001:2022 A.8.8 — Gestión de vulnerabilidades técnicas**.
 
 ---
 
 ## E. Matriz de control consolidada
 
-**Estado:** Pendiente.
+### E.1 Evidencia generada
 
-Archivo esperado: `40_hallazgos/PT04_matriz_control.csv`.
+- `30_papeles_trabajo/PT04_matriz_control.py`
+- `40_hallazgos/PT04_matriz_control.csv`
+- `docs/evidencias/S04/salidas/PT04_matriz_resumen.txt`
 
-Criterio de éxito: menos del **20 %** de hallazgos en `Sin clasificar`.
+### E.2 Resultado de consolidación
+
+La matriz consolidó resultados de **Lynis, OpenSCAP, Docker Bench y Trivy**.
+
+| Herramienta | Severidad | Hallazgos |
+|---|---|---:|
+| Docker Bench | Alta | 27 |
+| Lynis | Media | 28 |
+| OpenSCAP | Media | 3 |
+| Trivy | Critical | 44 |
+| Trivy | High | 374 |
+| **Total** |  | **476** |
+
+### E.3 Clasificación ISO/IEC 27001:2022
+
+| Control / clasificación | Cantidad |
+|---|---:|
+| A.8.8 Management of technical vulnerabilities | 415 |
+| Sin clasificar | 24 |
+| A.8.15 Logging | 9 |
+| A.8.2 Privileged access rights | 8 |
+| A.5.17 Authentication information | 6 |
+| A.8.9 Configuration management | 4 |
+| A.8.20 Networks security | 4 |
+| A.8.6 Capacity management | 3 |
+| A.8.16 Monitoring activities | 2 |
+| A.8.13 Information backup | 1 |
+
+### E.4 Cumplimiento del criterio
+
+- Total de hallazgos: **476**
+- Sin clasificar: **24**
+- Porcentaje sin clasificar: **5.04 %**
+- Criterio requerido: **< 20 %**
+- Resultado: **CUMPLE**
+
+Aunque el umbral ya se cumple, en el Paso F se revisarán los 24 elementos sin clasificar y una muestra de las asignaciones automáticas para comprobar que los mapeos sean razonables y no solo cuantitativamente suficientes.
 
 ---
 
 ## F. Diseño frente a eficacia operativa
 
-**Estado:** Pendiente de selección final después de consolidar la matriz.
+**Estado:** Pendiente de validación final.
 
 Criterio de análisis:
 
@@ -234,6 +256,6 @@ Candidato preliminar para análisis: controles de restricción de privilegios en
 | OpenSCAP | Pendiente después de versionar la evidencia |
 | Docker Bench | Pendiente después de versionar la evidencia |
 | Trivy | Pendiente después de versionar la evidencia |
-| Matriz consolidada | Pendiente |
+| Matriz consolidada | Pendiente después de versionar la evidencia |
 | Pull Request `s04-taller` → `develop` | Pendiente |
 | Etiqueta `taller-04` | Pendiente |
