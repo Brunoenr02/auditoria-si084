@@ -1,0 +1,19 @@
+Docker Bench - Sección 5
+========================
+WARN principales observados:
+5.2 AppArmor
+5.3 SELinux
+5.4 Capacidades adicionales
+5.8 Puerto privilegiado
+5.9 Puertos publicados
+5.11 Límite de memoria
+5.12 Restricción de CPU
+5.13 Filesystem raíz R/W
+5.22 Seccomp
+5.26 Adquisición de privilegios adicionales
+5.27 Healthcheck
+5.29 Límite de PIDs
+
+PASS relevantes:
+5.31 namespaces de usuario
+5.32 socket Docker no montado en contenedores
