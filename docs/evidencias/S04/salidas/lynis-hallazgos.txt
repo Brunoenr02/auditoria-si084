@@ -1,0 +1,11 @@
+Lynis - Hallazgos relevantes
+============================
+
+La ejecución produjo 0 entradas warning[]. Se conservaron sugerencias relevantes para análisis de auditoría.
+
+Sugerencias seleccionadas:
+- FIRE-4590: configurar firewall/filtro de paquetes para tráfico entrante y saliente.
+- ACCT-9628: habilitar auditd para recopilar información de auditoría.
+- FINT-4350: instalar una herramienta de integridad de archivos.
+
+Limitación: ejecución sobre Docker Desktop en Windows; Lynis evaluó el entorno Linux expuesto al contenedor, no el host Windows de forma nativa.
