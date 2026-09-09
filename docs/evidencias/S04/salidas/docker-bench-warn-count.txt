@@ -1,0 +1,5 @@
+Docker Bench - Conteo de WARN
+=============================
+Líneas [WARN] en docker-bench-clean.log: 174
+
+El valor representa líneas de advertencia, no 174 controles CIS distintos.
