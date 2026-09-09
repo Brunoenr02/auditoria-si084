@@ -1,0 +1,7 @@
+OpenSCAP - Reglas fallidas
+==========================
+1. xccdf_org.ssgproject.content_rule_package_pam_pwquality_installed | Medium | Install pam_pwquality Package
+2. xccdf_org.ssgproject.content_rule_use_pam_wheel_group_for_su | Medium | Enforce Usage of pam_wheel with Group Parameter for su Authentication
+3. xccdf_org.ssgproject.content_rule_permissions_local_var_log | Medium | Verify permissions of log files
+
+No se registraron fallos High en la ejecución real.
