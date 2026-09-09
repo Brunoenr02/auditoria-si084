@@ -3,9 +3,9 @@
 **Curso:** SI-084 · Auditoría de Sistemas  
 **Semana:** 04  
 **Rama de trabajo:** `s04-taller`  
-**Estado:** En ejecución  
+**Estado:** Cerrado  
 
-> Este papel de trabajo consolida los resultados obtenidos durante el Taller 04. Cada afirmación debe poder rastrearse a un archivo de evidencia. Al cierre, las evidencias se referenciarán mediante URLs sobre la etiqueta `taller-04`.
+> Este papel de trabajo consolida los resultados obtenidos durante el Taller 04. Cada afirmación debe poder rastrearse a un archivo de evidencia. Al cierre, las evidencias se referencian mediante URLs sobre la etiqueta `taller-04`.
 
 ---
 
@@ -215,7 +215,7 @@ La matriz consolidó resultados de **Lynis, OpenSCAP, Docker Bench y Trivy**.
 - Criterio requerido: **< 20 %**
 - Resultado: **CUMPLE**
 
-Aunque el umbral ya se cumple, en el Paso F se revisarán los 24 elementos sin clasificar y una muestra de las asignaciones automáticas para comprobar que los mapeos sean razonables y no solo cuantitativamente suficientes.
+Se revisaron los elementos no clasificados y una muestra de las asignaciones automáticas. El porcentaje final se mantiene por debajo del umbral requerido.
 
 ---
 
@@ -246,7 +246,6 @@ Se recomienda fortalecer la ejecución mediante responsables, plazos de remediac
 - `docs/evidencias/S04/salidas/PT04_validacion.txt`
 - `40_hallazgos/PT04_matriz_control.csv`
 
-
 ---
 
 ## G. Problemas y mejoras
@@ -261,7 +260,7 @@ Se recomienda fortalecer la ejecución mediante responsables, plazos de remediac
 
 ## H. Pregunta de transferencia
 
-**Pendiente al cierre:** ¿qué riesgo correría una organización real si este proceso de auditoría se hiciera mal?
+Si este proceso de auditoría se ejecutara incorrectamente, una organización podría subestimar vulnerabilidades críticas o asociar los hallazgos a controles equivocados, tomando decisiones de tratamiento de riesgo inadecuadas. Además, una cadena de custodia deficiente impediría demostrar la integridad y trazabilidad de la evidencia utilizada para sustentar las conclusiones.
 
 ---
 
@@ -269,10 +268,11 @@ Se recomienda fortalecer la ejecución mediante responsables, plazos de remediac
 
 | Resultado | URL |
 |---|---|
-| Lynis | Pendiente después de versionar la evidencia |
-| OpenSCAP | Pendiente después de versionar la evidencia |
-| Docker Bench | Pendiente después de versionar la evidencia |
-| Trivy | Pendiente después de versionar la evidencia |
-| Matriz consolidada | Pendiente después de versionar la evidencia |
-| Pull Request `s04-taller` → `develop` | Pendiente |
-| Etiqueta `taller-04` | Pendiente |
+| Lynis | https://github.com/Brunoenr02/auditoria-si084/tree/taller-04/20_evidencia/E04_config |
+| OpenSCAP | https://github.com/Brunoenr02/auditoria-si084/tree/taller-04/20_evidencia/E04_config |
+| Docker Bench | https://github.com/Brunoenr02/auditoria-si084/tree/taller-04/20_evidencia/E04_config |
+| Trivy | https://github.com/Brunoenr02/auditoria-si084/tree/taller-04/20_evidencia/E04_config |
+| Matriz consolidada | https://github.com/Brunoenr02/auditoria-si084/blob/taller-04/40_hallazgos/PT04_matriz_control.csv |
+| Validación | https://github.com/Brunoenr02/auditoria-si084/blob/taller-04/docs/evidencias/S04/salidas/PT04_validacion.txt |
+| Pull Request `s04-taller` → `develop` | https://github.com/Brunoenr02/auditoria-si084/pull/1 |
+| Etiqueta `taller-04` | https://github.com/Brunoenr02/auditoria-si084/tree/taller-04 |
