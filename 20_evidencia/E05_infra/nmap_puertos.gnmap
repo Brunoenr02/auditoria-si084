@@ -1,0 +1,18 @@
+# Nmap 7.98 scan initiated Wed Sep 16 21:16:49 2026 as: /usr/bin/nmap -n -T4 --min-rate 10000 --max-retries 1 -p- --open -oA nmap_puertos 172.18.0.1 172.18.0.2 172.18.0.3 172.18.0.4 172.18.0.5 172.18.0.6 172.18.0.7 172.18.0.8 172.18.0.9
+Host: 172.18.0.1 ()	Status: Up
+Host: 172.18.0.1 ()	Ports: 111/open/tcp//rpcbind///, 46363/open/tcp/////	Ignored State: closed (65533)
+Host: 172.18.0.2 ()	Status: Up
+Host: 172.18.0.2 ()	Ports: 80/open/tcp//http///	Ignored State: closed (65534)
+Host: 172.18.0.3 ()	Status: Up
+Host: 172.18.0.3 ()	Ports: 3306/open/tcp//mysql///	Ignored State: closed (65534)
+Host: 172.18.0.4 ()	Status: Up
+Host: 172.18.0.4 ()	Ports: 3000/open/tcp//ppp///	Ignored State: closed (65534)
+Host: 172.18.0.5 ()	Status: Up
+Host: 172.18.0.5 ()	Ports: 3306/open/tcp//mysql///	Ignored State: closed (65534)
+Host: 172.18.0.6 ()	Status: Up
+Host: 172.18.0.6 ()	Ports: 5432/open/tcp//postgresql///	Ignored State: closed (65534)
+Host: 172.18.0.7 ()	Status: Up
+Host: 172.18.0.7 ()	Ports: 80/open/tcp//http///	Ignored State: closed (65534)
+Host: 172.18.0.8 ()	Status: Up
+Host: 172.18.0.8 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: closed (65533)
+# Nmap done at Wed Sep 16 21:17:07 2026 -- 9 IP addresses (9 hosts up) scanned in 17.45 seconds

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Wed Sep 16 21:17:15 2026 as: /usr/bin/nmap -n -T4 -sV -sC -p 80,111,443,3000,3306,5432,46363 -oA nmap_servicios 172.18.0.1 172.18.0.2 172.18.0.3 172.18.0.4 172.18.0.5 172.18.0.6 172.18.0.7 172.18.0.8 172.18.0.9 -->
+<nmaprun scanner="nmap" args="/usr/bin/nmap -n -T4 -sV -sC -p 80,111,443,3000,3306,5432,46363 -oA nmap_servicios 172.18.0.1 172.18.0.2 172.18.0.3 172.18.0.4 172.18.0.5 172.18.0.6 172.18.0.7 172.18.0.8 172.18.0.9" start="1789593435" startstr="Wed Sep 16 21:17:15 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="7" services="80,111,443,3000,3306,5432,46363"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.2" addrtype="ipv4"/>
+<address addr="72:7A:FD:7A:25:34" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.3" addrtype="ipv4"/>
+<address addr="66:55:D4:84:86:68" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.4" addrtype="ipv4"/>
+<address addr="6A:2C:BE:B1:01:97" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.5" addrtype="ipv4"/>
+<address addr="9E:31:9C:5C:77:A2" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.6" addrtype="ipv4"/>
+<address addr="2A:23:C4:71:BF:15" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.7" addrtype="ipv4"/>
+<address addr="A2:84:E0:60:58:85" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.8" addrtype="ipv4"/>
+<address addr="2A:52:3F:C3:37:F6" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.1" addrtype="ipv4"/>
+<address addr="96:39:B2:85:85:56" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1789593435" endtime="1789593450"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.1" addrtype="ipv4"/>
+<address addr="96:39:B2:85:85:56" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100024  1          35623/udp6  status&#xa;  100024  1          37091/udp   status&#xa;  100024  1          46363/tcp   status&#xa;  100024  1          57335/tcp6  status&#xa;"><table key="100000">
+<table key="tcp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="udp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="tcp6">
+<elem key="port">111</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="local">
+<elem key="owner">superuser</elem>
+<elem key="addr">/run/rpcbind.sock</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp6">
+<elem key="port">111</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+</table>
+</table>
+<table key="100024">
+<table key="udp6">
+<elem key="port">35623</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="tcp6">
+<elem key="port">57335</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="tcp">
+<elem key="port">46363</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="udp">
+<elem key="port">37091</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="closed" reason="reset" reason_ttl="64"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="reset" reason_ttl="64"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="46363"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+</ports>
+<times srtt="6" rttvar="668" to="100000"/>
+</host>
+<host starttime="1789593435" endtime="1789593450"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.2" addrtype="ipv4"/>
+<address addr="72:7A:FD:7A:25:34" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-title" output="Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Develop...&#xa;Requested resource was login.php"><elem key="title">Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</elem>
+<elem key="redirect_url">login.php</elem>
+</script><script id="http-cookie-flags" output="&#xa;  /: &#xa;    PHPSESSID: &#xa;      httponly flag not set"><table key="/">
+<table key="PHPSESSID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-robots.txt" output="1 disallowed entry &#xa;/"/><script id="http-server-header" output="Apache/2.4.25 (Debian)"><elem>Apache/2.4.25 (Debian)</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="closed" reason="reset" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="closed" reason="reset" reason_ttl="64"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="reset" reason_ttl="64"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="46363"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="33" rttvar="699" to="100000"/>
+</host>
+<host starttime="1789593435" endtime="1789593450"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.3" addrtype="ipv4"/>
+<address addr="66:55:D4:84:86:68" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="closed" reason="reset" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="closed" reason="reset" reason_ttl="64"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MariaDB" version="11.8.9" method="probed" conf="10"><cpe>cpe:/a:mariadb:mariadb:11.8.9</cpe></service><script id="ssl-cert" output="Subject: commonName=MariaDB Server&#xa;Not valid before: 2026-09-16T20:32:17&#xa;Not valid after:  2036-09-13T20:32:17"><table key="subject">
+<elem key="commonName">MariaDB Server</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">MariaDB Server</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">D30C9E86D75E4D2B5D7CBDECB82790A08ECF690CFE3DEC3B52A4428AC1B2022E070D1094D40CD2F66D8A0730087195F0AE08F45394D489228493C9B63E35EBEDFBFD39741489991210681DB5703D82E67E2481489206B4A33388067B18A4FB4F7F6A69B73D2DDECC54B2DEAA275EA69395E0983E9046E3F15C0915839EC03C2F8B7CBE3314BF16CFED0B28A9C71FB11CD89F63FA1FD7B7EBE05A2685869AF0ADE4721958D0BA1F8841DDB6203296DE6A2677A05189E3D2F2C04C1554756FF90A09F12048F76A1694940A55294AA9AE7BC74B1965D6C638DD32F3C644E0320A8D0F62F62565B03252A9796147345BFCFEB0E2E9FE2711FB6014E7C678E6D4FD627DBB48FFECD0CAE156CD6E75768124F7B6C06CD301DE174B149F14D479CB7742376D88FD22BD64181B608786D9CC525272871303AF0F1B16CA968003792B88AAD2F369F29A25692D7F01F90796F862C2ACC788E79AB1CA71E97AC5A6A48B8F99A00682757ABA3DC5BB5800706F97CAFB318091CE2E3A0089BA64FA7C13C051189BDFDBD6E35AEE500D430B524AD1A0588F5AE156CB29E0D5489957FCDECCF5B6C51C3513B15489D54A7DF81CA5A3702950C9C385550E6CE42AF5F18685D000D4C21E351F27606E5C6C7A575D9D52242452DF9E829EA612680C9328958B8D61A5FA79AB42293B1DBADFF06EAEABB6F1399F116E89A60A6F950FD988C17AB65A73</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2026-09-16T20:32:17</elem>
+<elem key="notAfter">2036-09-13T20:32:17</elem>
+</table>
+<elem key="md5">2709fe5fc709af199110759c3ab8d4a3</elem>
+<elem key="sha1">047a7770cef3e7a9e10756ac9f0cf32ab7a1f730</elem>
+<elem key="sha256">64b65e4a99ed3bd4a0691efae323cffc81fbdef44ca94abda4b2cfe927e74c4d</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIEqzCCApOgAwIBAgIBADANBgkqhkiG9w0BAQsFADAZMRcwFQYDVQQDDA5NYXJp&#xa;YURCIFNlcnZlcjAeFw0yNjA5MTYyMDMyMTdaFw0zNjA5MTMyMDMyMTdaMBkxFzAV&#xa;BgNVBAMMDk1hcmlhREIgU2VydmVyMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIIC&#xa;CgKCAgEA0wyehtdeTStdfL3suCeQoI7PaQz+Pew7UqRCisGyAi4HDRCU1AzS9m2K&#xa;BzAIcZXwrgj0U5TUiSKEk8m2PjXr7fv9OXQUiZkSEGgdtXA9guZ+JIFIkga0ozOI&#xa;BnsYpPtPf2pptz0t3sxUst6qJ16mk5XgmD6QRuPxXAkVg57APC+LfL4zFL8Wz+0L&#xa;KKnHH7Ec2J9j+h/Xt+vgWiaFhprwreRyGVjQuh+IQd22IDKW3momd6BRiePS8sBM&#xa;FVR1b/kKCfEgSPdqFpSUClUpSqmue8dLGWXWxjjdMvPGROAyCo0PYvYlZbAyUql5&#xa;YUc0W/z+sOLp/icR+2AU58Z45tT9Yn27SP/s0MrhVs1udXaBJPe2wGzTAd4XSxSf&#xa;FNR5y3dCN22I/SK9ZBgbYIeG2cxSUnKHEwOvDxsWypaAA3kriKrS82nymiVpLX8B&#xa;+QeW+GLCrMeI55qxynHpesWmpIuPmaAGgnV6uj3Fu1gAcG+XyvsxgJHOLjoAibpk&#xa;+nwTwFEYm9/b1uNa7lANQwtSStGgWI9a4VbLKeDVSJlX/N7M9bbFHDUTsVSJ1Up9&#xa;+Bylo3ApUMnDhVUObOQq9fGGhdAA1MIeNR8nYG5cbHpXXZ1SJCRS356CnqYSaAyT&#xa;KJWLjWGl+nmrQik7Hbrf8G6uq7bxOZ8RbommCm+VD9mIwXq2WnMCAwEAATANBgkq&#xa;hkiG9w0BAQsFAAOCAgEAZ9O0GSXmTZMD5N47+UXWWeM6eZse+lI3bgniQjjjVbzl&#xa;/FvLLIZMSlUlr6Maaxnc1x+1/IaDJZv+4XEx6LPke+r5GhlFP/Dy3RvxKBewXEuT&#xa;0lWnpftdMpCiIjjLpIZU7jVxLjUZzQ4PZ7lGcBnJZboCCZ4ALJq0i+DWcvmpXI2Z&#xa;OBjuCGX3MVHcHJzCadtdF676QvhjvVE4BnPhruw9zELRjpHaFOgd2ZEQfE6s1P3Y&#xa;xDAQRvXuQQFSApAQL6+FSJjZrqwk4abxGagitAxN53byb8m8h5YPWzN1Z6QRm1Tw&#xa;sRVBGM3G5e1ItiyVLfdI3A18BavnzM4EkDJE2Q1LRrfPciPR5CXwLGh1AIpC4z33&#xa;DA5XzkIGp6w50rhmNyZPdRlvdtYclwhrEXccwRKRO30Fn7+cRAAmQ7QhfSmR1JdR&#xa;oGPmhdfsQPrkdIB92RHzQcNVI5qshWhXviJ3ATGrEXlzV18uio5qRn0JiUb76jhE&#xa;VD1ytdPOsb/Ce+T3UlOigoIBm1grQVHqfvCOhjheN1M/Wre0B1BQnEhzIjVmUqtx&#xa;8GbUuzV2OtMH2nMbNGcQq8+3fI5lmDPNJntoY9l6UT9IbN3q6JiM/IsXmHgtWLVk&#xa;Cv2NzwDpDZS8r4hiC4+OgZEY2YH87o8DyS+BoepeYyeIqOyBJ5src6/GbZ/jaYU=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="mysql-info" output="&#xa;  Protocol: 10&#xa;  Version: 11.8.9-MariaDB-ubu2404&#xa;  Thread ID: 14&#xa;  Capabilities flags: 65534&#xa;  Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, Speaks41ProtocolNew, LongColumnFlag, InteractiveClient, IgnoreSigpipes, SupportsTransactions, SwitchToSSLAfterHandshake, Speaks41ProtocolOld, ODBCClient, SupportsCompression, FoundRows, ConnectWithDatabase, IgnoreSpaceBeforeParenthesis, SupportsLoadDataLocal, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments&#xa;  Status: Autocommit&#xa;  Salt: %[yrR~E}gmn^n/&lt;!.d-R&#xa;  Auth Plugin Name: mysql_native_password"><elem key="Protocol">10</elem>
+<elem key="Version">11.8.9-MariaDB-ubu2404</elem>
+<elem key="Thread ID">14</elem>
+<elem key="Capabilities flags">65534</elem>
+<table key="Some Capabilities">
+<elem>DontAllowDatabaseTableColumn</elem>
+<elem>Support41Auth</elem>
+<elem>Speaks41ProtocolNew</elem>
+<elem>LongColumnFlag</elem>
+<elem>InteractiveClient</elem>
+<elem>IgnoreSigpipes</elem>
+<elem>SupportsTransactions</elem>
+<elem>SwitchToSSLAfterHandshake</elem>
+<elem>Speaks41ProtocolOld</elem>
+<elem>ODBCClient</elem>
+<elem>SupportsCompression</elem>
+<elem>FoundRows</elem>
+<elem>ConnectWithDatabase</elem>
+<elem>IgnoreSpaceBeforeParenthesis</elem>
+<elem>SupportsLoadDataLocal</elem>
+<elem>SupportsAuthPlugins</elem>
+<elem>SupportsMultipleResults</elem>
+<elem>SupportsMultipleStatments</elem>
+</table>
+<elem key="Status">Autocommit</elem>
+<elem key="Salt">%[yrR~E}gmn^n/&lt;!.d-R</elem>
+<elem key="Auth Plugin Name">mysql_native_password</elem>
+</script></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="reset" reason_ttl="64"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="46363"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="8" rttvar="668" to="100000"/>
+</host>
+<host starttime="1789593435" endtime="1789593450"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.4" addrtype="ipv4"/>
+<address addr="6A:2C:BE:B1:01:97" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="closed" reason="reset" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ppp" servicefp="SF-Port3000-TCP:V=7.98%I=7%D=9/16%Time=6AAB0766%P=x86_64-unknown-linux-gnu%r(GetRequest,2668,&quot;HTTP/1\.1\x20200\x20OK\r\nAccess-Control-Allow-Origin:\x20\*\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nFeature-Policy:\x20payment\x20&apos;self&apos;\r\nX-Recruiting:\x20/#/jobs\r\nAccept-Ranges:\x20bytes\r\nCache-Control:\x20public,\x20max-age=0\r\nLast-Modified:\x20Wed,\x2016\x20Sep\x202026\x2020:32:20\x20GMT\r\nETag:\x20W/\&quot;24b1-1a0abeb9dfd\&quot;\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x209393\r\nVary:\x20Accept-Encoding\r\nDate:\x20Wed,\x2016\x20Sep\x202026\x2021:17:26\x20GMT\r\nConnection:\x20close\r\n\r\n&lt;!-&#45;\n\x20\x20~\x20Copyright\x20\(c\)\x202014-2026\x20Bjoern\x20Kimminich\x20&amp;\x20the\x20OWASP\x20Juice\x20Shop\x20contributors\.\n\x20\x20~\x20SPDX-License-Identifier:\x20MIT\n\x20\x20-&#45;&gt;\n\n&lt;!doctype\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;\x20data-beasties-container&gt;\n&lt;head&gt;\n\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;&gt;\n\x20\x20&lt;title&gt;OWASP\x20Juice\x20Shop&lt;/title&gt;\n\x20\x20&lt;meta\x20name=\&quot;description\&quot;\x20content=\&quot;Probably\x20the\x20most\x20modern\x20and\x20sophisticated\x20insecure\x20web\x20application\&quot;&gt;\n\x20\x20&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width=device-width,\x20initial-scale=1\&quot;&gt;\n\x20\x20&lt;link\x20rel=\&quot;preconnect\&quot;\x20href=\&quot;htt&quot;)%r(Help,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(NCP,2F,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n&quot;)%r(HTTPOptions,EA,&quot;HTTP/1\.1\x20204\x20No\x20Content\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nVary:\x20Access-Control-Request-Headers\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2016\x20Sep\x202026\x2021:17:26\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;)%r(RTSPRequest,EA,&quot;HTTP/1\.1\x20204\x20No\x20Content\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nVary:\x20Access-Control-Request-Headers\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2016\x20Sep\x202026\x2021:17:26\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.1 200 OK&#xa;    Access-Control-Allow-Origin: *&#xa;    X-Content-Type-Options: nosniff&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Feature-Policy: payment &apos;self&apos;&#xa;    X-Recruiting: /#/jobs&#xa;    Accept-Ranges: bytes&#xa;    Cache-Control: public, max-age=0&#xa;    Last-Modified: Wed, 16 Sep 2026 20:32:20 GMT&#xa;    ETag: W/&quot;24b1-1a0abeb9dfd&quot;&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Content-Length: 9393&#xa;    Vary: Accept-Encoding&#xa;    Date: Wed, 16 Sep 2026 21:17:26 GMT&#xa;    Connection: close&#xa;    &lt;!-&#45;&#xa;    Copyright (c) 2014-2026 Bjoern Kimminich &amp; the OWASP Juice Shop contributors.&#xa;    SPDX-License-Identifier: MIT&#xa;    &lt;!doctype html&gt;&#xa;    &lt;html lang=&quot;en&quot; data-beasties-container&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot;&gt;&#xa;    &lt;title&gt;OWASP Juice Shop&lt;/title&gt;&#xa;    &lt;meta name=&quot;description&quot; content=&quot;Probably the most modern and sophisticated insecure web application&quot;&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xa;    &lt;link rel=&quot;preconnect&quot; href=&quot;htt&#xa;  HTTPOptions, RTSPRequest: &#xa;    HTTP/1.1 204 No Content&#xa;    Access-Control-Allow-Origin: *&#xa;    Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE&#xa;    Vary: Access-Control-Request-Headers&#xa;    Content-Length: 0&#xa;    Date: Wed, 16 Sep 2026 21:17:26 GMT&#xa;    Connection: close&#xa;  Help, NCP: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close"><elem key="GetRequest">&#xa;    HTTP/1.1 200 OK&#xa;    Access-Control-Allow-Origin: *&#xa;    X-Content-Type-Options: nosniff&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Feature-Policy: payment &apos;self&apos;&#xa;    X-Recruiting: /#/jobs&#xa;    Accept-Ranges: bytes&#xa;    Cache-Control: public, max-age=0&#xa;    Last-Modified: Wed, 16 Sep 2026 20:32:20 GMT&#xa;    ETag: W/&quot;24b1-1a0abeb9dfd&quot;&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Content-Length: 9393&#xa;    Vary: Accept-Encoding&#xa;    Date: Wed, 16 Sep 2026 21:17:26 GMT&#xa;    Connection: close&#xa;    &lt;!-&#45;&#xa;    Copyright (c) 2014-2026 Bjoern Kimminich &amp; the OWASP Juice Shop contributors.&#xa;    SPDX-License-Identifier: MIT&#xa;    &lt;!doctype html&gt;&#xa;    &lt;html lang=&quot;en&quot; data-beasties-container&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta charset=&quot;utf-8&quot;&gt;&#xa;    &lt;title&gt;OWASP Juice Shop&lt;/title&gt;&#xa;    &lt;meta name=&quot;description&quot; content=&quot;Probably the most modern and sophisticated insecure web application&quot;&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xa;    &lt;link rel=&quot;preconnect&quot; href=&quot;htt</elem>
+<elem key="HTTPOptions, RTSPRequest">&#xa;    HTTP/1.1 204 No Content&#xa;    Access-Control-Allow-Origin: *&#xa;    Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE&#xa;    Vary: Access-Control-Request-Headers&#xa;    Content-Length: 0&#xa;    Date: Wed, 16 Sep 2026 21:17:26 GMT&#xa;    Connection: close</elem>
+<elem key="Help, NCP">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="reset" reason_ttl="64"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="46363"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="8" rttvar="669" to="100000"/>
+</host>
+<host starttime="1789593435" endtime="1789593450"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.5" addrtype="ipv4"/>
+<address addr="9E:31:9C:5C:77:A2" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="closed" reason="reset" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="closed" reason="reset" reason_ttl="64"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MariaDB" version="11.8.9" method="probed" conf="10"><cpe>cpe:/a:mariadb:mariadb:11.8.9</cpe></service><script id="ssl-cert" output="Subject: commonName=MariaDB Server&#xa;Not valid before: 2026-09-16T20:32:17&#xa;Not valid after:  2036-09-13T20:32:17"><table key="subject">
+<elem key="commonName">MariaDB Server</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">MariaDB Server</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">9AFEEE110375B7F8D366F3273DF669058ED329BB32E1F5329591A0EB6954618DB7169D62B78DD276C53334E0DA4C171FB941CC0D46467FBB9867B262EDBFCFD5AC7F3B4E1A91F084FAE9D10CC46265178FCFCB21148AAB6B998B17854595B06BE2FC177019C9434B1D6AFAAD32A630B0AF9D9C5244833BF3EDE6C60C0249CABC9173AE435336D032CE8DF793B9F5291611B9DB51BB7E7110B3BA5FDFC5E1C74C856C07F165F1FBAC54041F1FD968CC3F36971F57CE131CA3724225CBA62465D823B8709B931219E533419C44FF51772B163A059FB1BD3865E4BE5B9AEDA18E136623111EDE9979E995E7A61054E0FF8914602F807CF32DED49BDAFD76F8FF33B3B2C85211A1764310304A304B5413B3963FE47E823E66E2C75A14C09EE6663C904EC3933C8F94C97781D1CF8FBCF246CE21D63AAEDCB986DA7719DE4FC77D63C152078E95ADE543B26AED4D498DB8055BE0A07421BB804BAFE725696A22CCDE99EEB6DA713AAA977C6945F8DAC48A57FA1772370BEFC657543A59C60190C56C7431848EC8D7BFA55DA9798DEAF80A9A9C47DA6273D1942709AAC5D911CBCD5D718B52E617B53E018E3A3B6A32295E9CB03D6D54C393C5A773D9E4EAEDD668E7E7405F47C7527A4741E1B8D07500D25EBA7BDC73979CF0FCA1A4E7AF2A4DFE5ABA634D4BC271B0F2798BF006F3C4877A89598A022D716F0D061FF01DB3776DE59</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2026-09-16T20:32:17</elem>
+<elem key="notAfter">2036-09-13T20:32:17</elem>
+</table>
+<elem key="md5">f00c7a774b584b6f997050cec4c8c8c4</elem>
+<elem key="sha1">a3cd6877368300eb6709a0ce129fdbd371f6b76d</elem>
+<elem key="sha256">66daa0fe6f08fb59b9c315fc42605e1186942c47c0f7ed588e494d7ec5e3dcba</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIEqzCCApOgAwIBAgIBADANBgkqhkiG9w0BAQsFADAZMRcwFQYDVQQDDA5NYXJp&#xa;YURCIFNlcnZlcjAeFw0yNjA5MTYyMDMyMTdaFw0zNjA5MTMyMDMyMTdaMBkxFzAV&#xa;BgNVBAMMDk1hcmlhREIgU2VydmVyMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIIC&#xa;CgKCAgEAmv7uEQN1t/jTZvMnPfZpBY7TKbsy4fUylZGg62lUYY23Fp1it43SdsUz&#xa;NODaTBcfuUHMDUZGf7uYZ7Ji7b/P1ax/O04akfCE+unRDMRiZRePz8shFIqra5mL&#xa;F4VFlbBr4vwXcBnJQ0sdavqtMqYwsK+dnFJEgzvz7ebGDAJJyryRc65DUzbQMs6N&#xa;95O59SkWEbnbUbt+cRCzul/fxeHHTIVsB/Fl8fusVAQfH9lozD82lx9XzhMco3JC&#xa;JcumJGXYI7hwm5MSGeUzQZxE/1F3KxY6BZ+xvThl5L5bmu2hjhNmIxEe3pl56ZXn&#xa;phBU4P+JFGAvgHzzLe1Jva/Xb4/zOzsshSEaF2QxAwSjBLVBOzlj/kfoI+ZuLHWh&#xa;TAnuZmPJBOw5M8j5TJd4HRz4+88kbOIdY6rty5htp3Gd5Px31jwVIHjpWt5UOyau&#xa;1NSY24BVvgoHQhu4BLr+claWoizN6Z7rbacTqql3xpRfjaxIpX+hdyNwvvxldUOl&#xa;nGAZDFbHQxhI7I17+lXal5jer4CpqcR9pic9GUJwmqxdkRy81dcYtS5he1PgGOOj&#xa;tqMilenLA9bVTDk8Wnc9nk6u3WaOfnQF9Hx1J6R0HhuNB1ANJeunvcc5ec8PyhpO&#xa;evKk3+WrpjTUvCcbDyeYvwBvPEh3qJWYoCLXFvDQYf8B2zd23lkCAwEAATANBgkq&#xa;hkiG9w0BAQsFAAOCAgEAZtoYcoH+NFPj9d0ty4/BGaCCheOuB5tKd3d6QOBSYgDl&#xa;Lfl6Srh688GM1qgcxj/JZQuDIqsGDHUJ7CwdHRBkZHUUsTIXgeJlll9KkA03Mlzq&#xa;xqEH3O5r8aj8m0lpH2VK2q2WR2cv0c3Z9IP6tiLLlqLSJCPGAsHRINWlkKOZBKFZ&#xa;0CM0dZm8kHTkGik/+b5ve20pdNwNYYgPNYw7rnc+pEMBLuQ+tH39x0h7fGz72Rmq&#xa;g6Wdvu0iMQo5s8YFyo8uPr6sREonE2O1FoXvX7URg37zy8oQwPhM6Ga2xFV+EOSb&#xa;w7kuQD5tUr6cegLaTD7v9t4GKfgK9PBI7kvL6DMZlIJk1aLBivextqSzecaPSF/s&#xa;Ii9+vAqJtAFrJ3KLGiNUnRAdDnUwZdhxykODe03/MJ3oeWjTFXJpqtdeE57L9rrp&#xa;lljShuy2yGK3SclmZSYfDAepDyztMPrROAH6IhTWpFUVHKXQA6xEhmOQXKb8QQBO&#xa;RfnByTjL9+S1NP2jaargvObkuEOrqDrmCu7iQFhSpXCvrbEJ9GfkINXUXwhhgfsL&#xa;virgNfLxaCadJiojPm1Cl9NA7qdeqel5g2I8aQrxp88mDt2sigpgwHIOuYOkb4DP&#xa;U/GNW+fmGBmigcuS7GtJU70tLVJPfznjkYvImLxMV/4ogv5U0/T/hJPwNoxaHiE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="mysql-info" output="&#xa;  Protocol: 10&#xa;  Version: 11.8.9-MariaDB-ubu2404&#xa;  Thread ID: 50&#xa;  Capabilities flags: 65534&#xa;  Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, Speaks41ProtocolNew, LongColumnFlag, InteractiveClient, IgnoreSigpipes, SupportsTransactions, SwitchToSSLAfterHandshake, Speaks41ProtocolOld, ODBCClient, SupportsCompression, FoundRows, ConnectWithDatabase, IgnoreSpaceBeforeParenthesis, SupportsLoadDataLocal, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments&#xa;  Status: Autocommit&#xa;  Salt: MLt$T]ToP&quot;Xvh)0U=qB2&#xa;  Auth Plugin Name: mysql_native_password"><elem key="Protocol">10</elem>
+<elem key="Version">11.8.9-MariaDB-ubu2404</elem>
+<elem key="Thread ID">50</elem>
+<elem key="Capabilities flags">65534</elem>
+<table key="Some Capabilities">
+<elem>DontAllowDatabaseTableColumn</elem>
+<elem>Support41Auth</elem>
+<elem>Speaks41ProtocolNew</elem>
+<elem>LongColumnFlag</elem>
+<elem>InteractiveClient</elem>
+<elem>IgnoreSigpipes</elem>
+<elem>SupportsTransactions</elem>
+<elem>SwitchToSSLAfterHandshake</elem>
+<elem>Speaks41ProtocolOld</elem>
+<elem>ODBCClient</elem>
+<elem>SupportsCompression</elem>
+<elem>FoundRows</elem>
+<elem>ConnectWithDatabase</elem>
+<elem>IgnoreSpaceBeforeParenthesis</elem>
+<elem>SupportsLoadDataLocal</elem>
+<elem>SupportsAuthPlugins</elem>
+<elem>SupportsMultipleResults</elem>
+<elem>SupportsMultipleStatments</elem>
+</table>
+<elem key="Status">Autocommit</elem>
+<elem key="Salt">MLt$T]ToP&quot;Xvh)0U=qB2</elem>
+<elem key="Auth Plugin Name">mysql_native_password</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="reset" reason_ttl="64"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="46363"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="7" rttvar="668" to="100000"/>
+</host>
+<host starttime="1789593435" endtime="1789593450"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.6" addrtype="ipv4"/>
+<address addr="2A:23:C4:71:BF:15" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="closed" reason="reset" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="closed" reason="reset" reason_ttl="64"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="postgresql" product="PostgreSQL DB" version="9.6.0 or later" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql</cpe></service></port>
+<port protocol="tcp" portid="46363"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="8" rttvar="669" to="100000"/>
+</host>
+<host starttime="1789593435" endtime="1789593450"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.7" addrtype="ipv4"/>
+<address addr="A2:84:E0:60:58:85" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.68" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.68</cpe></service><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/><script id="http-server-header" output="Apache/2.4.68 (Debian)"><elem>Apache/2.4.68 (Debian)</elem>
+</script><script id="http-title" output="WordPress &amp;rsaquo; Installation&#xa;Requested resource was http://172.18.0.7/wp-admin/install.php"><elem key="title">WordPress &amp;rsaquo; Installation</elem>
+<elem key="redirect_url">http://172.18.0.7/wp-admin/install.php</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="closed" reason="reset" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="closed" reason="reset" reason_ttl="64"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="reset" reason_ttl="64"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="46363"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="6" rttvar="669" to="100000"/>
+</host>
+<host starttime="1789593435" endtime="1789593450"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="172.18.0.8" addrtype="ipv4"/>
+<address addr="2A:52:3F:C3:37:F6" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-title" output="Did not follow redirect to https://172.18.0.8/"><elem key="redirect_url">https://172.18.0.8/</elem>
+</script><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="closed" reason="reset" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="http-title" output="SimpleRisk: Enterprise Risk Management Simplified"><elem key="title">SimpleRisk: Enterprise Risk Management Simplified</elem>
+</script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-cert" output="Subject: commonName=simplerisk&#xa;Not valid before: 2026-08-28T21:56:41&#xa;Not valid after:  2027-08-28T21:56:41"><table key="subject">
+<elem key="commonName">simplerisk</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">simplerisk</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">CE2BC6AD810658233FA278F3DC744DEBF465F3AFA9132FE0A914B240679F874105C6C09F1882A459A2988DA3D27C7586AF135B561AEB153A0D295CAF83B4202445CE925D152C11BB9E53531EF7F4BC9C59B2CD99412EFABDF20E772EBA984D8E7CAABAEEF6BAAA83F2634303D12667E08E0BB8F5BE09266DC1319A1D7E26050865EA2D054F2BFDE1C90B9AF95D052F97E14D362F39A3A67230A03504810B5DD4F20B6046EDB1D00C2D0D986F712F74E53DA38E50BF58910D0953491D556290E6A21110F35DF102354DB93A958F7A8E64156768920FB4E488AF05F0891D21DD97E104EA66A5295BBDE96804A450934DBC785BD9E7A414BC449463774D184538DD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2026-08-28T21:56:41</elem>
+<elem key="notAfter">2027-08-28T21:56:41</elem>
+</table>
+<elem key="md5">42d4d02ac862863b41c781d27bd186f5</elem>
+<elem key="sha1">f952ffe300488dcafd7764428a99a468ffbf101a</elem>
+<elem key="sha256">8b4b6819ddc8dee2b9dfbb01b81d3faa59b83c490083f348760a32d10a2df4bd</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICsTCCAZkCFCLjjMQ2Kw4iHSskYAJAjGnWFZHXMA0GCSqGSIb3DQEBCwUAMBUx&#xa;EzARBgNVBAMMCnNpbXBsZXJpc2swHhcNMjYwODI4MjE1NjQxWhcNMjcwODI4MjE1&#xa;NjQxWjAVMRMwEQYDVQQDDApzaW1wbGVyaXNrMIIBIjANBgkqhkiG9w0BAQEFAAOC&#xa;AQ8AMIIBCgKCAQEAzivGrYEGWCM/onjz3HRN6/Rl86+pEy/gqRSyQGefh0EFxsCf&#xa;GIKkWaKYjaPSfHWGrxNbVhrrFToNKVyvg7QgJEXOkl0VLBG7nlNTHvf0vJxZss2Z&#xa;QS76vfIOdy66mE2OfKq67va6qoPyY0MD0SZn4I4LuPW+CSZtwTGaHX4mBQhl6i0F&#xa;Tyv94ckLmvldBS+X4U02LzmjpnIwoDUEgQtd1PILYEbtsdAMLQ2Yb3EvdOU9o45Q&#xa;v1iRDQlTSR1VYpDmohEQ813xAjVNuTqVj3qOZBVnaJIPtOSIrwXwiR0h3ZfhBOpm&#xa;pSlbveloBKRQk028eFvZ56QUvESUY3dNGEU43QIDAQABMA0GCSqGSIb3DQEBCwUA&#xa;A4IBAQAxpcVMPMTkM98Mda6mMCV36rbTtbRkor2CVI7Itw6OohjCrJyE1e9acO47&#xa;030jDIU02C/fPm9XBhE8wqg72fYnIXTd27/+qJxfIaKJXHEvsI/6oJCaycTU4u4i&#xa;TwTdkxEZpnnZ8Xw5oAY+S+rNMj3B58ls/ZoIC6mPbQBuKsDsOKlqhw/9f8NkfsCB&#xa;J103NHW+IrZQzzg4IcCvYvDJVuzPVc7C538F7mVENv8OANbEJ1CEJxHIYLNGz1JB&#xa;v4jm9uc+n5bNJalEqgx/SocDy5mzy0WChgtF4oaKzXCGG24EE609iu0C4qIrr4M9&#xa;js432D0AasjMWM4vrS/AjSxNRJVX&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="3000"><state state="closed" reason="reset" reason_ttl="64"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="reset" reason_ttl="64"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="46363"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="8" rttvar="669" to="100000"/>
+</host>
+<host starttime="1789593450" endtime="1789593452"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="172.18.0.9" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="46363"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+</host>
+<runstats><finished time="1789593452" timestr="Wed Sep 16 21:17:32 2026" summary="Nmap done at Wed Sep 16 21:17:32 2026; 9 IP addresses (9 hosts up) scanned in 17.23 seconds" elapsed="17.23" exit="success"/><hosts up="9" down="0" total="9"/>
+</runstats>
+</nmaprun>

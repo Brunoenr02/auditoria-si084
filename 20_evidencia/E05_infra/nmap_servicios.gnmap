@@ -1,0 +1,20 @@
+# Nmap 7.98 scan initiated Wed Sep 16 21:17:15 2026 as: /usr/bin/nmap -n -T4 -sV -sC -p 80,111,443,3000,3306,5432,46363 -oA nmap_servicios 172.18.0.1 172.18.0.2 172.18.0.3 172.18.0.4 172.18.0.5 172.18.0.6 172.18.0.7 172.18.0.8 172.18.0.9
+Host: 172.18.0.1 ()	Status: Up
+Host: 172.18.0.1 ()	Ports: 80/closed/tcp//http///, 111/open/tcp//rpcbind//2-4 (RPC #100000)/, 443/closed/tcp//https///, 3000/closed/tcp//ppp///, 3306/closed/tcp//mysql///, 5432/closed/tcp//postgresql///, 46363/open/tcp//status//1 (RPC #100024)/
+Host: 172.18.0.2 ()	Status: Up
+Host: 172.18.0.2 ()	Ports: 80/open/tcp//http//Apache httpd 2.4.25 ((Debian))/, 111/closed/tcp//rpcbind///, 443/closed/tcp//https///, 3000/closed/tcp//ppp///, 3306/closed/tcp//mysql///, 5432/closed/tcp//postgresql///, 46363/closed/tcp/////
+Host: 172.18.0.3 ()	Status: Up
+Host: 172.18.0.3 ()	Ports: 80/closed/tcp//http///, 111/closed/tcp//rpcbind///, 443/closed/tcp//https///, 3000/closed/tcp//ppp///, 3306/open/tcp//mysql//MariaDB 11.8.9/, 5432/closed/tcp//postgresql///, 46363/closed/tcp/////
+Host: 172.18.0.4 ()	Status: Up
+Host: 172.18.0.4 ()	Ports: 80/closed/tcp//http///, 111/closed/tcp//rpcbind///, 443/closed/tcp//https///, 3000/open/tcp//ppp?///, 3306/closed/tcp//mysql///, 5432/closed/tcp//postgresql///, 46363/closed/tcp/////
+Host: 172.18.0.5 ()	Status: Up
+Host: 172.18.0.5 ()	Ports: 80/closed/tcp//http///, 111/closed/tcp//rpcbind///, 443/closed/tcp//https///, 3000/closed/tcp//ppp///, 3306/open/tcp//mysql//MariaDB 11.8.9/, 5432/closed/tcp//postgresql///, 46363/closed/tcp/////
+Host: 172.18.0.6 ()	Status: Up
+Host: 172.18.0.6 ()	Ports: 80/closed/tcp//http///, 111/closed/tcp//rpcbind///, 443/closed/tcp//https///, 3000/closed/tcp//ppp///, 3306/closed/tcp//mysql///, 5432/open/tcp//postgresql//PostgreSQL DB 9.6.0 or later/, 46363/closed/tcp/////
+Host: 172.18.0.7 ()	Status: Up
+Host: 172.18.0.7 ()	Ports: 80/open/tcp//http//Apache httpd 2.4.68 ((Debian))/, 111/closed/tcp//rpcbind///, 443/closed/tcp//https///, 3000/closed/tcp//ppp///, 3306/closed/tcp//mysql///, 5432/closed/tcp//postgresql///, 46363/closed/tcp/////
+Host: 172.18.0.8 ()	Status: Up
+Host: 172.18.0.8 ()	Ports: 80/open/tcp//http//Apache httpd/, 111/closed/tcp//rpcbind///, 443/open/tcp//ssl|http//Apache httpd/, 3000/closed/tcp//ppp///, 3306/closed/tcp//mysql///, 5432/closed/tcp//postgresql///, 46363/closed/tcp/////
+Host: 172.18.0.9 ()	Status: Up
+Host: 172.18.0.9 ()	Ports: 80/filtered/tcp//http///, 111/filtered/tcp//rpcbind///, 443/filtered/tcp//https///, 3000/filtered/tcp//ppp///, 3306/filtered/tcp//mysql///, 5432/filtered/tcp//postgresql///, 46363/filtered/tcp/////
+# Nmap done at Wed Sep 16 21:17:32 2026 -- 9 IP addresses (9 hosts up) scanned in 17.23 seconds
