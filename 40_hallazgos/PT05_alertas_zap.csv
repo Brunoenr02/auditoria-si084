@@ -1,0 +1,11 @@
+riesgo,alerta,cwe,instancias,solucion,wstg,owasp_top10,iso27001,tipo_mapeo
+Medium,Content Security Policy (CSP) Header Not Set,693,5,"<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy",WSTG-CONF-12,A05 Security Misconfiguration,A.8.9,Directo según guía del taller
+Medium,Cross-Domain Misconfiguration,264,5,"<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instanc",WSTG-CLNT-07,A05 Security Misconfiguration,A.8.9,Relacionado: configuración CORS
+Low,Cross-Origin-Embedder-Policy Header Missing or Invalid,693,5,"<p>Ensure that the application/web server sets the Cross-Origin-Embedder-Policy header appropriately, and that it sets t",WSTG-CONF-14,A05 Security Misconfiguration,A.8.9,Relacionado: cabecera HTTP de seguridad
+Low,Cross-Origin-Opener-Policy Header Missing or Invalid,693,5,"<p>Ensure that the application/web server sets the Cross-Origin-Opener-Policy header appropriately, and that it sets the",WSTG-CONF-14,A05 Security Misconfiguration,A.8.9,Relacionado: cabecera HTTP de seguridad
+Low,Deprecated Feature Policy Header Set,16,5,"<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy head",WSTG-CONF-14,A05 Security Misconfiguration,A.8.9,Relacionado: cabecera HTTP obsoleta
+Low,Timestamp Disclosure - Unix,497,5,"<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploit",,,,
+Informational,Storable but Non-Cacheable Content,524,5,,,,,
+Informational,Modern Web Application,-1,5,<p>This is an informational alert and so no changes are required.</p>,,,,
+Low,Dangerous JS Functions,749,1,<p>See the references for security advice on the use of these functions.</p>,WSTG-CLNT-02,A03 Injection,A.8.28,Relacionado: requiere validación manual
+Informational,Storable and Cacheable Content,524,1,"<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider th",,,,
