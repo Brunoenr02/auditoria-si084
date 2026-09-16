@@ -1,0 +1,248 @@
+# Nmap 7.98 scan initiated Wed Sep 16 21:17:15 2026 as: /usr/bin/nmap -n -T4 -sV -sC -p 80,111,443,3000,3306,5432,46363 -oA nmap_servicios 172.18.0.1 172.18.0.2 172.18.0.3 172.18.0.4 172.18.0.5 172.18.0.6 172.18.0.7 172.18.0.8 172.18.0.9
+Nmap scan report for 172.18.0.1
+Host is up (0.0000060s latency).
+
+PORT      STATE  SERVICE    VERSION
+80/tcp    closed http
+111/tcp   open   rpcbind    2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          35623/udp6  status
+|   100024  1          37091/udp   status
+|   100024  1          46363/tcp   status
+|_  100024  1          57335/tcp6  status
+443/tcp   closed https
+3000/tcp  closed ppp
+3306/tcp  closed mysql
+5432/tcp  closed postgresql
+46363/tcp open   status     1 (RPC #100024)
+MAC Address: 96:39:B2:85:85:56 (Unknown)
+
+Nmap scan report for 172.18.0.2
+Host is up (0.000033s latency).
+
+PORT      STATE  SERVICE    VERSION
+80/tcp    open   http       Apache httpd 2.4.25 ((Debian))
+| http-title: Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Develop...
+|_Requested resource was login.php
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Apache/2.4.25 (Debian)
+111/tcp   closed rpcbind
+443/tcp   closed https
+3000/tcp  closed ppp
+3306/tcp  closed mysql
+5432/tcp  closed postgresql
+46363/tcp closed unknown
+MAC Address: 72:7A:FD:7A:25:34 (Unknown)
+
+Nmap scan report for 172.18.0.3
+Host is up (0.0000080s latency).
+
+PORT      STATE  SERVICE    VERSION
+80/tcp    closed http
+111/tcp   closed rpcbind
+443/tcp   closed https
+3000/tcp  closed ppp
+3306/tcp  open   mysql      MariaDB 11.8.9
+| ssl-cert: Subject: commonName=MariaDB Server
+| Not valid before: 2026-09-16T20:32:17
+|_Not valid after:  2036-09-13T20:32:17
+|_ssl-date: TLS randomness does not represent time
+| mysql-info: 
+|   Protocol: 10
+|   Version: 11.8.9-MariaDB-ubu2404
+|   Thread ID: 14
+|   Capabilities flags: 65534
+|   Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, Speaks41ProtocolNew, LongColumnFlag, InteractiveClient, IgnoreSigpipes, SupportsTransactions, SwitchToSSLAfterHandshake, Speaks41ProtocolOld, ODBCClient, SupportsCompression, FoundRows, ConnectWithDatabase, IgnoreSpaceBeforeParenthesis, SupportsLoadDataLocal, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: %[yrR~E}gmn^n/<!.d-R
+|_  Auth Plugin Name: mysql_native_password
+5432/tcp  closed postgresql
+46363/tcp closed unknown
+MAC Address: 66:55:D4:84:86:68 (Unknown)
+
+Nmap scan report for 172.18.0.4
+Host is up (0.0000080s latency).
+
+PORT      STATE  SERVICE    VERSION
+80/tcp    closed http
+111/tcp   closed rpcbind
+443/tcp   closed https
+3000/tcp  open   ppp?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Access-Control-Allow-Origin: *
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Feature-Policy: payment 'self'
+|     X-Recruiting: /#/jobs
+|     Accept-Ranges: bytes
+|     Cache-Control: public, max-age=0
+|     Last-Modified: Wed, 16 Sep 2026 20:32:20 GMT
+|     ETag: W/"24b1-1a0abeb9dfd"
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 9393
+|     Vary: Accept-Encoding
+|     Date: Wed, 16 Sep 2026 21:17:26 GMT
+|     Connection: close
+|     <!--
+|     Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+|     SPDX-License-Identifier: MIT
+|     <!doctype html>
+|     <html lang="en" data-beasties-container>
+|     <head>
+|     <meta charset="utf-8">
+|     <title>OWASP Juice Shop</title>
+|     <meta name="description" content="Probably the most modern and sophisticated insecure web application">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link rel="preconnect" href="htt
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 204 No Content
+|     Access-Control-Allow-Origin: *
+|     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+|     Vary: Access-Control-Request-Headers
+|     Content-Length: 0
+|     Date: Wed, 16 Sep 2026 21:17:26 GMT
+|     Connection: close
+|   Help, NCP: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+3306/tcp  closed mysql
+5432/tcp  closed postgresql
+46363/tcp closed unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.98%I=7%D=9/16%Time=6AAB0766%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,2668,"HTTP/1\.1\x20200\x20OK\r\nAccess-Control-Allow-Orig
+SF:in:\x20\*\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20
+SF:SAMEORIGIN\r\nFeature-Policy:\x20payment\x20'self'\r\nX-Recruiting:\x20
+SF:/#/jobs\r\nAccept-Ranges:\x20bytes\r\nCache-Control:\x20public,\x20max-
+SF:age=0\r\nLast-Modified:\x20Wed,\x2016\x20Sep\x202026\x2020:32:20\x20GMT
+SF:\r\nETag:\x20W/\"24b1-1a0abeb9dfd\"\r\nContent-Type:\x20text/html;\x20c
+SF:harset=UTF-8\r\nContent-Length:\x209393\r\nVary:\x20Accept-Encoding\r\n
+SF:Date:\x20Wed,\x2016\x20Sep\x202026\x2021:17:26\x20GMT\r\nConnection:\x2
+SF:0close\r\n\r\n<!--\n\x20\x20~\x20Copyright\x20\(c\)\x202014-2026\x20Bjo
+SF:ern\x20Kimminich\x20&\x20the\x20OWASP\x20Juice\x20Shop\x20contributors\
+SF:.\n\x20\x20~\x20SPDX-License-Identifier:\x20MIT\n\x20\x20-->\n\n<!docty
+SF:pe\x20html>\n<html\x20lang=\"en\"\x20data-beasties-container>\n<head>\n
+SF:\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20<title>OWASP\x20Juice\x20S
+SF:hop</title>\n\x20\x20<meta\x20name=\"description\"\x20content=\"Probabl
+SF:y\x20the\x20most\x20modern\x20and\x20sophisticated\x20insecure\x20web\x
+SF:20application\">\n\x20\x20<meta\x20name=\"viewport\"\x20content=\"width
+SF:=device-width,\x20initial-scale=1\">\n\x20\x20<link\x20rel=\"preconnect
+SF:\"\x20href=\"htt")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCon
+SF:nection:\x20close\r\n\r\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,EA,"HTTP/1\.1\x20204\
+SF:x20No\x20Content\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Contro
+SF:l-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nVary:\x20Access-C
+SF:ontrol-Request-Headers\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2016\x
+SF:20Sep\x202026\x2021:17:26\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(RT
+SF:SPRequest,EA,"HTTP/1\.1\x20204\x20No\x20Content\r\nAccess-Control-Allow
+SF:-Origin:\x20\*\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,P
+SF:OST,DELETE\r\nVary:\x20Access-Control-Request-Headers\r\nContent-Length
+SF::\x200\r\nDate:\x20Wed,\x2016\x20Sep\x202026\x2021:17:26\x20GMT\r\nConn
+SF:ection:\x20close\r\n\r\n");
+MAC Address: 6A:2C:BE:B1:01:97 (Unknown)
+
+Nmap scan report for 172.18.0.5
+Host is up (0.0000070s latency).
+
+PORT      STATE  SERVICE    VERSION
+80/tcp    closed http
+111/tcp   closed rpcbind
+443/tcp   closed https
+3000/tcp  closed ppp
+3306/tcp  open   mysql      MariaDB 11.8.9
+| ssl-cert: Subject: commonName=MariaDB Server
+| Not valid before: 2026-09-16T20:32:17
+|_Not valid after:  2036-09-13T20:32:17
+| mysql-info: 
+|   Protocol: 10
+|   Version: 11.8.9-MariaDB-ubu2404
+|   Thread ID: 50
+|   Capabilities flags: 65534
+|   Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, Speaks41ProtocolNew, LongColumnFlag, InteractiveClient, IgnoreSigpipes, SupportsTransactions, SwitchToSSLAfterHandshake, Speaks41ProtocolOld, ODBCClient, SupportsCompression, FoundRows, ConnectWithDatabase, IgnoreSpaceBeforeParenthesis, SupportsLoadDataLocal, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: MLt$T]ToP"Xvh)0U=qB2
+|_  Auth Plugin Name: mysql_native_password
+|_ssl-date: TLS randomness does not represent time
+5432/tcp  closed postgresql
+46363/tcp closed unknown
+MAC Address: 9E:31:9C:5C:77:A2 (Unknown)
+
+Nmap scan report for 172.18.0.6
+Host is up (0.0000080s latency).
+
+PORT      STATE  SERVICE    VERSION
+80/tcp    closed http
+111/tcp   closed rpcbind
+443/tcp   closed https
+3000/tcp  closed ppp
+3306/tcp  closed mysql
+5432/tcp  open   postgresql PostgreSQL DB 9.6.0 or later
+46363/tcp closed unknown
+MAC Address: 2A:23:C4:71:BF:15 (Unknown)
+
+Nmap scan report for 172.18.0.7
+Host is up (0.0000060s latency).
+
+PORT      STATE  SERVICE    VERSION
+80/tcp    open   http       Apache httpd 2.4.68 ((Debian))
+|_http-trane-info: Problem with XML parsing of /evox/about
+|_http-server-header: Apache/2.4.68 (Debian)
+| http-title: WordPress &rsaquo; Installation
+|_Requested resource was http://172.18.0.7/wp-admin/install.php
+111/tcp   closed rpcbind
+443/tcp   closed https
+3000/tcp  closed ppp
+3306/tcp  closed mysql
+5432/tcp  closed postgresql
+46363/tcp closed unknown
+MAC Address: A2:84:E0:60:58:85 (Unknown)
+
+Nmap scan report for 172.18.0.8
+Host is up (0.0000080s latency).
+
+PORT      STATE  SERVICE    VERSION
+80/tcp    open   http       Apache httpd
+|_http-title: Did not follow redirect to https://172.18.0.8/
+|_http-server-header: Apache
+111/tcp   closed rpcbind
+443/tcp   open   ssl/http   Apache httpd
+|_http-server-header: Apache
+|_http-title: SimpleRisk: Enterprise Risk Management Simplified
+| tls-alpn: 
+|_  http/1.1
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=simplerisk
+| Not valid before: 2026-08-28T21:56:41
+|_Not valid after:  2027-08-28T21:56:41
+3000/tcp  closed ppp
+3306/tcp  closed mysql
+5432/tcp  closed postgresql
+46363/tcp closed unknown
+MAC Address: 2A:52:3F:C3:37:F6 (Unknown)
+
+Nmap scan report for 172.18.0.9
+Host is up.
+
+PORT      STATE    SERVICE    VERSION
+80/tcp    filtered http
+111/tcp   filtered rpcbind
+443/tcp   filtered https
+3000/tcp  filtered ppp
+3306/tcp  filtered mysql
+5432/tcp  filtered postgresql
+46363/tcp filtered unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 16 21:17:32 2026 -- 9 IP addresses (9 hosts up) scanned in 17.23 seconds
