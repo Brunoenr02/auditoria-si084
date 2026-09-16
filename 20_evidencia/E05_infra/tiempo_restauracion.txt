@@ -1,0 +1,1 @@
+Tiempo real de restauración: 1 segundos

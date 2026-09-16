@@ -1,0 +1,60 @@
+# Nmap 7.98 scan initiated Wed Sep 16 21:16:49 2026 as: /usr/bin/nmap -n -T4 --min-rate 10000 --max-retries 1 -p- --open -oA nmap_puertos 172.18.0.1 172.18.0.2 172.18.0.3 172.18.0.4 172.18.0.5 172.18.0.6 172.18.0.7 172.18.0.8 172.18.0.9
+Nmap scan report for 172.18.0.1
+Host is up (0.0000020s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT      STATE SERVICE
+111/tcp   open  rpcbind
+46363/tcp open  unknown
+MAC Address: 96:39:B2:85:85:56 (Unknown)
+
+Nmap scan report for 172.18.0.2
+Host is up (0.0000030s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 72:7A:FD:7A:25:34 (Unknown)
+
+Nmap scan report for 172.18.0.3
+Host is up (0.0000040s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE
+3306/tcp open  mysql
+MAC Address: 66:55:D4:84:86:68 (Unknown)
+
+Nmap scan report for 172.18.0.4
+Host is up (0.0000030s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE
+3000/tcp open  ppp
+MAC Address: 6A:2C:BE:B1:01:97 (Unknown)
+
+Nmap scan report for 172.18.0.5
+Host is up (0.0000030s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE
+3306/tcp open  mysql
+MAC Address: 9E:31:9C:5C:77:A2 (Unknown)
+
+Nmap scan report for 172.18.0.6
+Host is up (0.0000040s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE
+5432/tcp open  postgresql
+MAC Address: 2A:23:C4:71:BF:15 (Unknown)
+
+Nmap scan report for 172.18.0.7
+Host is up (0.0000040s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: A2:84:E0:60:58:85 (Unknown)
+
+Nmap scan report for 172.18.0.8
+Host is up (0.0000030s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+MAC Address: 2A:52:3F:C3:37:F6 (Unknown)
+
+# Nmap done at Wed Sep 16 21:17:07 2026 -- 9 IP addresses (9 hosts up) scanned in 17.45 seconds
